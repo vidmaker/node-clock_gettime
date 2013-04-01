@@ -1,0 +1,32 @@
+@project clock_gettimejs
+@targetNamespace clock_gettimejs
+
+@header
+  \#include <v8.h>
+@cpp
+  \#include "bea.h"
+  \#include "clock_gettimejs.h"
+  \#include "clock_gettimejs_impl.h"
+
+@const
+  CLOCK_REALTIME
+  CLOCK_REALTIME_COARSE
+  CLOCK_MONOTONIC
+  CLOCK_MONOTONIC_COARSE
+  CLOCK_MONOTONIC_RAW
+  CLOCK_BOOTTIME
+  CLOCK_PROCESS_CPUTIME_ID
+  CLOCK_THREAD_CPUTIME_ID
+
+@namespace clock_gettimejs
+  @type time_t
+  @type timespec
+    time_t tv_sec
+    long tv_nsec
+  @static clock_gettimejs
+    timespec clock_getres(int clk_id);
+      THROW_IF_NOT(clk_id >= 0, "Invalid clk_id");
+      THROW_IF_NOT(clk_id < 10, "Invalid clk_id");
+    timespec clock_gettime(int clk_id);
+      THROW_IF_NOT(clk_id >= 0, "Invalid clk_id");
+      THROW_IF_NOT(clk_id < 10, "Invalid clk_id");

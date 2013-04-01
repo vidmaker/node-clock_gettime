@@ -1,0 +1,29 @@
+{
+  "name": "clock_gettime",
+  "version": "0.1.0",
+  "description": "A simple wrapper for the POSIX's high resolution clock functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vidmaker/node-clock_gettime.git"
+  },
+  "keywords": [
+    "timer",
+    "time",
+    "benchmark",
+    "clock",
+    "real-time",
+    "POSIX",
+    "clock_gettime",
+    "clock_getres"
+  ],
+  "scripts": {
+    "install": "node-gyp configure build"
+  },
+  "author": "Dale Emmons <dale@vidmaker.com>",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
